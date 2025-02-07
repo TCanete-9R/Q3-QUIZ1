@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<title>QUIZ 2</title>
+</head>
+<body>
+	<div>
+		<h1>JAVASCRIPT OPERATIONS</h1>
+
+		<h3>GIVEN:If A = 24.18 and B = 7.18, compute the folowing:</h3>
+		
+		<div class="container">
+			<h2>Arithmetic Operations</h2>
+			<h4>What's the Exponent and Mod</h4>
+			<button type="button" id="arithmetic-btn" class="btn btn-info">Show Answer</button>
+      		<div id="arithmetic-result" class="result"></div>
+		</div>
+
+		<div class="container">
+			<h2>Comparison Operations</h2>
+			<h4>Is A greater than B?</h4>
+			<h4>Is A equal to B?</h4>
+			<button type="button" id="comparison-btn" class="btn btn-info">Show Answer</button>
+      		<div id="comparison-result" class="result"></div>
+		</div>
+
+		<div class="container">
+			<h2>Logical Operations</h2>
+			<h4>True or False</h4>
+			<h4>True or False</h4>
+			<button type="button" id="logical-btn" class="btn btn-info">Show Answer</button>
+      		<div id="logical-result" class="result"></div>
+      	</div>
+      	
+      	<div class="container">
+      		<button type="button" class="btn btn-info" onclick="window.location.reload()">REFRESH</button>
+      	</div>
+      	
+	</div>
+
+	<script>
+    const A = 24.18;
+    const B = 7.18;
+
+    document.getElementById('arithmetic-btn').onclick = () => {
+      document.getElementById('arithmetic-result').innerText =
+        `Exponent: ${(A ** B).toFixed(2)}, Modulus: ${(A % B).toFixed(2)}`;
+    };
+
+    document.getElementById('comparison-btn').onclick = () => {
+      document.getElementById('comparison-result').innerText =
+        `Is 30.27 greater than 6.18? ${30.27 > 6.18}, Is 30.27 equal to 6.18? ${30.27 === 6.18}`;
+    };
+
+    document.getElementById('logical-btn').onclick = () => {
+      document.getElementById('logical-result').innerText =
+        `(A <= B) && (A >= B): ${(A <= B) && (A >= B)}, (A != B) || (A == B): ${(A != B) || (A == B)}`;
+    };
+  </script>
+    
+  <script type="text/javascript">
+	window.alert("Welcome to Tar's Quiz 1");
+	</script>
+	
+</body>
+</html>
